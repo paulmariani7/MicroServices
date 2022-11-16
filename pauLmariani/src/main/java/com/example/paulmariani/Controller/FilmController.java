@@ -1,25 +1,30 @@
 package com.example.paulmariani.Controller;
 
 import com.example.paulmariani.model.Film;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+@RestController
+@Api(value = "FilmController", description = "REST Apis related to Film!!!!")
 public class FilmController {
 
-    List<com.example.paulmariani.model.Film> Film = new ArrayList<Film>();
+    List<Film> Film = new ArrayList<Film>();
 
     {
-        Film.add(new Film("PEAKYBLINDERS", "john", "baba", "26/10/22"));
-        Film.add(new Film("ELITE", "toto", "Pascal", "31/01/21"));
-        Film.add(new Film("STRANGER THINGS", "isma", "Dimitri", "19/11/33"));
-        Film.add(new Film("CASA DEL PAPEL", "pablo", "Mariani", "23/12/24"));
+        Film.add(new Film("PEAKYBLINDERS", "john", "baba", "26.10.22"));
+        Film.add(new Film("ELITE", "toto", "Pascal", "31.01.21"));
+        Film.add(new Film("STRANGER THINGS", "isma", "Dimitri", "19.11.33"));
+        Film.add(new Film("CASA DEL PAPEL", "pablo", "Mariani", "23.12.24"));
     }
 
     @ApiOperation(value = "Get list of Students in the System ", response = Iterable.class, tags = "getFilm")
