@@ -21,12 +21,12 @@ public class movieController {
 
     public List<Acteur> listActeur(){
         List<Acteur> list = new ArrayList<>();
-        list.add(new Acteur("test", "rock", new Date("11/01/1998"), new ArrayList<Film>( )    ) );
+        list.add(new Acteur("Testing", "New", new Date("24/10/2003"), new ArrayList<Film>( )    ) );
         return list;
     }
     public List<Film> listFilm(){
         List<Film> list = new ArrayList<>();
-        list.add(new Film("wakanda", "tintin",  new ArrayList<Acteur>(), new Date("10/10/2020")) );
+        list.add(new Film("Cars", "youpi",  new ArrayList<Acteur>(), new Date("07/04/2000")) );
         return list;
     }
 
